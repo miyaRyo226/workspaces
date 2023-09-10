@@ -1,0 +1,20 @@
+// See https://containers.dev/implementors/json_reference/ for configuration reference
+{
+	"name": "Untitled Node.js project",
+	"dockerComposeFile": "../compose.yaml",
+	"service": "app",
+	"workspaceFolder": "/workspaces",
+"remoteUser": "node",
+"features": {
+	"ghcr.io/devcontainers/features/git:1": {},
+	"ghcr.io/devcontainers/features/github-cli:1": {}
+},
+"customizations": {
+	"vscode": {
+		"extensions": [
+			"Prisma.prisma",
+			"ms-azuretools.vscode-docker"
+		]
+	}
+}
+}

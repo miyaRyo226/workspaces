@@ -1,0 +1,16 @@
+services:
+  app:
+    build: 
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+    tty: true
+    volumes:
+      - type: bind
+        source: .
+        target: /workspaces
+    working_dir: /workspaces
+  test-db:
+    image: postgres:15.4-bullseye
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
